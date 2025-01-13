@@ -24,6 +24,9 @@ https://hub.docker.com/repository/docker/halfcoconut/hello-egg/general
  1109  kubectl patch deployment hello-egg --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/resources", "value": {"requests": {"memory": "100Mi", "cpu": "100m"}}}]'
  1110  kubectl get pods
  1111  kubectl exec -it hello-egg-5df44f68d-vx58w -- bash
+kubectl apply -f https://ghproxy.com/https://raw.githubusercontent.com/lyzhang1999/resource/main/fluxcd/fluxcd.yaml
+kubectl wait --for=condition=available --timeout=300s --all deployments -n flux-system
+
 ```
 
 ```shell
