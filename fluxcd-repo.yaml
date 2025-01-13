@@ -6,4 +6,5 @@ spec:
   interval: 5s
   ref:
     branch: main
-  url: https://github.com/lyzhang1999/fluxcd-demo
+#    替换成 repo 地址
+  url: https://github.com/<repo-address>/fluxcd-demo
