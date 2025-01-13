@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello-egg
+  name: hello-egg
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-egg
+  strategy: { }
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hello-egg
+    spec:
+      containers:
+        - image: halfcoconut/hello-egg:latest
+          name: hello-egg
+          resources: { }
+status: { }
+
+# 自动生成 deployment 文件
+# kubectl create deployment hello-egg --image=halfcoconut/hello-egg:latest --replicas=2 --dry-run=client -o yaml
