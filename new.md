@@ -47,3 +47,11 @@ kubectl wait --for=condition=available --timeout=300s --all deployments -n flux-
 15. 创建并发请求：kubectl exec -it hello-world-flask-64dd645c57-4clbp -- ab -c 50 -n 10000 http://127.0.0.1:5000/
 16. 查看 pod 数量：k get pods -w
 ```
+
+QA：前端添加的数据会被删除，因为没有挂盘存储。生产环境用那种存储框架？
+作者回复: 在生产环境下有很多存储方案，比如：
+1. https://github.com/rook/rook
+2. https://github.com/ceph/ceph
+3. https://github.com/longhorn/longhorn
+
+如果你用的是云厂商的托管 K8s 集群，云厂商一般会直接提供现成的存储方案，比如结合自家云盘的存储，不需要自建。
