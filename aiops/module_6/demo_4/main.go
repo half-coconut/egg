@@ -25,17 +25,6 @@ func main() {
 	if err != nil {
 		fmt.Printf("1 err %s\n", err.Error())
 	}
-	//var kubeconfig *string
-	//if home := homedir.HomeDir(); home != "" {
-	//	kubeconfig = flag.String("kubeconfig", filepath.Join(home, ".kube", "config"), "[可选] kubeconfig 绝对路径")
-	//} else {
-	//	kubeconfig = flag.String("kubeconfig", "", "kubeconfig 绝对路径")
-	//}
-	//config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
-	//if err != nil {
-	//	panic(err)
-	//}
-
 	dynamicClient, err := dynamic.NewForConfig(config)
 	if err != nil {
 		fmt.Printf("2 err %s\n", err.Error())
