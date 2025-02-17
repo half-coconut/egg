@@ -4,3 +4,9 @@
 https://github.com/geektime-aiops-in-action/aiops
 https://github.com/jasnei/Learning_at_ruc
 ```
+
+
+```shell
+export PATH="/usr/local/bin:${PATH}"
+
+```
